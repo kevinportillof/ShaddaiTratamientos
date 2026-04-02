@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<title>Tratamientos y Diseños de Color </title>
+
+<!-- ICONOS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+referrerpolicy="no-referrer">
+
+
+<style>
+    
+/* RESET BÁSICO */
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* BODY BASE */
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #333;
+    overflow-x: hidden;
+
+   background:
+  radial-gradient(circle at 20% 10%, rgba(0,0,0,0.04), transparent 40%),
+  radial-gradient(circle at 85% 85%, rgba(0,0,0,0.03), transparent 40%),
+  linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    img.logo {
+        width: 80%;
+        max-width: 350px;
+        border-radius: 20px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+    }
+
+    img.logo:hover {
+        transform: rotate(-3deg) scale(1.05);
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        cursor: pointer;
+    }
+    .logo {
+    margin: 0 auto;
+    }
+
+    h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    margin-top: 15px;
+    color: #111111;
+    text-shadow: none;
+}
+
+    /* BOTONES */
+.btn{
+    display: block;
+    width: 85%;
+    max-width: 320px;
+    margin: 14px auto;
+    padding: 16px;
+
+    background: #111;            /* negro elegante */
+    color: #d4d4d4;              /* gris claro elegante */
+
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 22px;
+    border: 1px solid #222;
+
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: all 0.25s ease;
+}
+
+.btn:hover{
+    background: #000;
+    color: #ffffff;              /* al pasar el mouse se vuelve blanco */
+    transform: translateY(-3px);
+}
+
+.btn:active{
+    transform: scale(0.97);
+}
+
+@media (max-width: 768px){
+    .btn{
+        font-size: 16px;
+        padding: 18px;
+        border-radius: 24px;
+    }
+}
+
+   .social-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: nowrap;
+}
+
+    .social-circle {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 0 12px rgba(255,215,0,0.25);
+    }
+    .social-circle:hover { transform: scale(1.15); }
+
+    .tikTok { background: #000; }
+    .facebook { background: #1877f2; }
+    .instagram { 
+        background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    }
+    .maps { background: #34a853; }
+
+ .titulo{
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.subtitulo-servicios{
+  max-width: 520px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+    
+/* ===== AJUSTES SOLO PARA CELULAR ===== */
+@media (max-width: 768px) {
+
+    body{
+        background-attachment: scroll;
+        background-position: center top;
+    }
+
+    .contenido{
+        padding-top: 35px;
+    }
+
+    img.logo{
+        width: 90%;
+        max-width: 280px;
+    }
+
+     h1{
+        font-size: 34px;
+        margin-top: 10px;
+       color: #111;
+        text-shadow: none;
+    }
+
+    .btn{
+        width: 90%;
+        font-size: 16px;
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .btn:hover{
+        transform: none;
+    }
+
+    .titulo{
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .social-container{
+        gap: 14px;
+        margin-top: 25px;
+    }
+
+    .social-circle{
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+} /* ← CIERRA EL @media (max-width: 768px) */
+
+/* BOTÓN WHATSAPP FLOTANTE SOLO CELULAR */
+.whatsapp-float {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 0 0 18px rgba(37,211,102,0.7);
+    z-index: 900;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 0 25px rgba(37,211,102,1);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        display: flex;
+    }
+}
+
+.maps {
+    animation: pulseMap 2.5s infinite;
+}
+
+@keyframes pulseMap {
+    0% { box-shadow: 0 0 0 0 rgba(52,168,83,0.6); }
+    70% { box-shadow: 0 0 0 10px rgba(52,168,83,0); }
+    100% { box-shadow: 0 0 0 0 rgba(52,168,83,0); }
+}
+
+.subtitulo{
+  margin-top: 12px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #444;
+}
+
+
+@media (max-width: 768px){
+    .subtitulo{
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+}
+
+.subtitulo-servicios{
+    max-width: 420px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.garantia{
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.subtitulo-productos{
+    max-width: 420px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.subtitulo-productos small{
+     color: #555; }
+
+/* ORDEN PROFESIONAL DE PRODUCTOS */
+.producto-marca{
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+   color: #111;
+    margin-bottom: 4px;
+}
+
+.producto-nombre{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.producto-precio {
+  background: #f2f2f2;
+}
+
+.producto-desc{
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+.productos-lista {
+  max-width: 1300px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  padding: 0 20px;
+}
+
+.producto-item img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.producto-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.producto-info{
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.producto-info small{
+    display: block;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.nota-productos.femenina{
+    max-width: 420px;
+    margin: 32px auto 24px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+    letter-spacing: 0.6px;
+    color: #444;
+    opacity: 0.95;
+}
+
+.servicios {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.garantia {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.zoom-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.zoom-overlay img{
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 20px;
+}
+
+.zoom-overlay span{
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Cursor de zoom para imágenes clickeables */
+.producto-item img,
+#galeria img,
+.seccion img {
+    cursor: zoom-in;
+}
+
+.nota-productos {
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 15px;
+}
+
+.btn:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* CONTROL CORRECTO DE SECCIONES */
+.seccion {
+  display: none;
+  position: relative;
+  z-index: 2;
+  padding: 60px 20px;
+  background: transparent;
+}
+
+/* TÍTULO CENTRADO, CONTENIDO NORMAL */
+#productos .titulo,
+#productos .subtitulo-productos {
+  text-align: center;
+}
+
+/* ===== PRODUCTOS (DEFINITIVO) ===== */
+#productos {
+  padding: 40px 0;
+}
+
+.productos-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#productos .titulo,
+#productos .subtitulo-productos {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.producto-desc.completa {
+  display: none;
+}
+
+.marca-titulo {
+  margin: 30px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #111;
+}
+
+.producto-item .btn {
+  width: 100%;
+  max-width: none;
+  font-size: 15px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.subtitulo-productos {
+  margin-bottom: 10px; /* 👈 CLAVE */
+}
+
+#productos .productos-inner {
+  padding-top: 0;   /* 👈 evita empuje invisible */
+}
+
+#buscador {
+  margin-bottom: 12px;
+}
+
+/* DESCRIPCIONES */
+
+.ver-mas {
+  background: none;
+  border: none;
+  color: #777;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 6px 0 10px;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* BOTÓN WHATSAPP POR PRODUCTO */
+.btn-whatsapp-producto {
+  background: #25D366;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+  border-radius: 18px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+/* ===== SERVICIOS – BRILLO BASE ===== */
+.servicio-item{
+  position: relative;
+
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(14px);
+
+  padding: 22px;
+  border-radius: 22px;
+
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+
+  border: 1px solid rgba(0,0,0,0.08);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+
+  transition: all 0.35s ease;
+}
+
+.servicio-item:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.15);
+}
+
+.servicio-item strong{
+  color: #111;
+}
+
+.servicio-item span{
+  color: #777;
+}
+
+.servicio-item small{
+  color: #555;
+}
+
+.servicio-item.destacado{
+border: 1px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.grupo-servicios {
+  max-width: 1100px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 0 15px;
+}
+
+/* ===== GALERÍA SIN FONDO PROPIO ===== */
+#galeria{
+  background: transparent;
+}
+
+#galeria .titulo,
+#galeria .subtitulo-servicios{
+  color: #222;
+}
+
+.producto-item img {
+  max-height: 280px;
+}
+
+#buscador{
+  width:100%;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid #ddd;
+  margin:10px 0 12px;
+  font-size:15px;
+}
+
+.galeria-item{
+  max-width: 420px;
+}
+
+.galeria-item img{
+  width:100%;
+  border-radius:20px;
+}
+
+.servicio-item strong{
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.servicio-item span{
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.servicio-item small{
+  display: block;
+  font-size: 13.5px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.servicio-item::after{
+  content: "";
+  display: block;
+  margin-top: 14px;
+  width: 40px;
+  height: 2px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 2px;
+}
+
+/* BARRA PREMIUM */
+.nivel{
+  margin: 10px 0 15px;
+}
+
+.barra{
+  width: 100%;
+  height: 6px;
+  background: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progreso{
+  height: 100%;
+  background: #111;
+  border-radius: 10px;
+}
+
+.nivel span{
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* BOTÓN SERVICIO */
+.btn-servicio{
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 16px;
+
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+.btn-servicio:hover{
+  transform: translateY(-2px);
+  background: #000;
+}
+
+</style>
+</head>
+<body>
+
+    <div class="zoom-overlay" id="zoomOverlay" onclick="cerrarZoom()">
+    <span>&times;</span>
+    <img id="zoomImg">
+</div>
+
+<a href="https://wa.me/523111795658" 
+   class="whatsapp-float" 
+   target="_blank"
+   aria-label="Agendar cita por WhatsApp">
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<div class="contenido" id="inicio">
+    <img src="https://i.ibb.co/vvVQyXhJ/Disen-o-sin-ti-tulo.png"
+         class="logo"
+         alt="Logotipo Estética Gold Glam"
+         onclick="regresar()">
+<h1>Tratamientos y Diseños de Color</h1>
+<p class="subtitulo">
+Belleza, cosmetica y cuidado personal
+</p>
+
+<a class="btn btn-principal"
+   href="https://wa.me/523111795658?text=Hola,%20buen%20día%20%0AMe%20gustaría%20agendar%20una%20cita%20y%20recibir%20una%20cotización,%20por%20favor.%0AGracias."
+   target="_blank">
+💬 Agenda tu cita
+</a>
+
+<button class="btn" onclick="mostrar('servicios')">
+✂️ Servicios
+</button>
+
+<button class="btn" onclick="mostrar('productos')">
+🧴 Productos
+</button>
+
+<button class="btn" onclick="mostrar('galeria')">
+🖼️ Galería
+</button>
+
+
+    <div class="social-container">
+        <a class="social-circle tikTok" href="https://www.tiktok.com/@shaddai.tratamien?_r=1&_t=ZS-94orsBiZFZM" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a class="social-circle facebook" href="https://www.facebook.com/share/14SsC4dz3B5/?mibextid=wwXIfr" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a class="social-circle instagram" href="https://www.instagram.com/shaddai_tratamientos1?igsh=aTdrdjFrZjIyeGx2" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a class="social-circle maps" onclick="abrirMapa()">
+            <i class="fa-solid fa-location-dot"></i>
+        </a>
+
+    </div>
+</div>
+
+<section class="seccion servicios" id="servicios">
+
+  <h2 class="titulo">Tratamientos Capilares</h2>
+
+  <p class="subtitulo-servicios">
+    Especialistas en tratamientos diseñados para eliminar el frizz,
+    hidratar y restaurar tu cabello desde la primera aplicación.
+  </p>
+
+  <div class="grupo-servicios">
+
+    <!-- ALISADO -->
+    <div class="servicio-item destacado">
+      💖 <strong>Alisado Reestructurante</strong>
+
+      <div class="nivel">
+        <div class="barra">
+          <div class="progreso" style="width:95%"></div>
+        </div>
+        <span>Alisado 95%</span>
+      </div>
+
+      <small>
+        Elimina el frizz al 100%, aporta cuerpo, brillo y suavidad.
+        Reduce la porosidad y regenera el cabello.
+      </small>
+
+      <a class="btn-servicio" onclick="preguntar('Alisado Reestructurante')">
+        💬 Consultar tratamiento
+      </a>
+    </div>
+
+    <!-- BOTOX -->
+    <div class="servicio-item destacado">
+      💖 <strong>Botox Reestructurante</strong>
+
+      <div class="nivel">
+        <div class="barra">
+          <div class="progreso" style="width:80%"></div>
+        </div>
+        <span>Alisado 80%</span>
+      </div>
+
+      <small>
+        Nutrición profunda, elimina frizz y restaura cabello procesado.
+        Duración aproximada: 4 meses.
+      </small>
+
+      <a class="btn-servicio" onclick="preguntar('Botox Reestructurante')">
+        💬 Consultar tratamiento
+      </a>
+    </div>
+
+    <!-- ENCERADO FUERTE -->
+    <div class="servicio-item">
+      💖 <strong>Encerado Extra Fuerte</strong>
+
+      <div class="nivel">
+        <div class="barra">
+          <div class="progreso" style="width:60%"></div>
+        </div>
+        <span>Alisado 60%</span>
+      </div>
+
+      <small>
+        Aporta brillo, suavidad y elimina frizz.
+        Reduce la porosidad del cabello.
+      </small>
+
+      <a class="btn-servicio" onclick="preguntar('Encerado Extra Fuerte')">
+        💬 Consultar tratamiento
+      </a>
+    </div>
+
+    <!-- BOTOX HIDRATANTE -->
+    <div class="servicio-item">
+      💖 <strong>Botox Hidratante</strong>
+
+      <div class="nivel">
+        <div class="barra">
+          <div class="progreso" style="width:20%"></div>
+        </div>
+        <span>Alisado 20%</span>
+      </div>
+
+      <small>
+        Hidratación profunda, brillo y control total del frizz.
+      </small>
+
+      <a class="btn-servicio" onclick="preguntar('Botox Hidratante')">
+        💬 Consultar tratamiento
+      </a>
+    </div>
+
+    <!-- ANTI FRIZZ -->
+    <div class="servicio-item">
+      💖 <strong>Encerado Anti-Frizz</strong>
+
+      <div class="nivel">
+        <div class="barra">
+          <div class="progreso" style="width:100%"></div>
+        </div>
+        <span>Control de frizz 100%</span>
+      </div>
+
+      <small>
+        Elimina el frizz sin alisar, mantiene la forma natural del cabello.
+      </small>
+
+      <a class="btn-servicio" onclick="preguntar('Encerado Anti-Frizz')">
+        💬 Consultar tratamiento
+      </a>
+    </div>
+
+  </div>
+
+  <p class="garantia">
+    ✨ Cada tratamiento se adapta a tu tipo de cabello para lograr el mejor resultado.
+  </p>
+
+  <a class="btn" onclick="regresar()">⬅️ Regresar</a>
+
+</section>
+
+
+<div class="seccion" id="productos">
+  <div class="productos-inner">
+
+    <h2 class="titulo">Productos</h2>
+
+    <p class="subtitulo-productos">
+      Trabajamos con productos profesionales y originales, cuidadosamente seleccionados
+      para cuidar y mantener la salud y belleza de tu cabello desde casa.
+      <br>La disponibilidad puede variar según existencia.
+    </p>
+
+    <p class="nota-productos femenina">
+  💳 Contamos con <strong>3 meses sin intereses</strong> en compras seleccionadas
+  con tarjetas de crédito participantes.
+  <br>
+  <small>Aplican términos y condiciones. Solo tarjetas aceptadas por terminal BBVA.</small>
+</p>
+
+    <!-- 🔍 BUSCADOR -->
+    <input 
+  type="text" 
+  id="buscador"
+  placeholder="Buscar producto (ej. shampoo, rizos, rubio)">
+
+    <!-- 📦 LISTA DE PRODUCTOS -->
+    <div class="productos-lista">
+
+      
+      <!-- PRODUCTO 1 -->    
+      
+
+      <!-- PRODUCTO 2 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/dwSV6Gn0/Whats-App-Image-2026-03-23-at-06-49-32.jpg"
+             alt="Redken Acidic Color Gloss Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+            Acidic Color Gloss Conditioner · Acondicionador protector del color
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Acondicionador que protege el color y aporta brillo intenso.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Acondicionador profesional diseñado para cabello teñido o tratado
+           químicamente. Sella la cutícula, prolonga el color y aporta brillo
+           intenso mientras suaviza el cabello.
+          <br><br>
+           💗 Beneficios principales:
+          <br>
+           • Protege el color  
+          <br>
+           • Aporta brillo intenso  
+          <br>
+           • Sella la cutícula  
+          <br>
+           • Suaviza y repara el cabello  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+            💬 Preguntar por este producto
+          </a>
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 3 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/27WpMqZB/Whats-App-Image-2026-03-23-at-06-49-32-1.jpg"
+             alt="Redken Acidic Bonding Concentrate Serum"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+            Acidic Bonding Concentrate Serum · Sérum reparador fortalecedor
+          </div>
+
+          <span class="producto-precio">$999 MXN</span>
+
+          <small class="producto-desc corta">
+           Sérum reparador que fortalece el cabello y protege del calor.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Sérum profesional diseñado para reparar el cabello dañado,
+           decolorado o tratado químicamente. Fortalece la fibra capilar,
+           aporta brillo y protege contra el calor de herramientas térmicas.
+          <br><br>
+          🤍 Beneficios principales:
+          <br>
+           • Repara cabello dañado  
+          <br>
+           • Fortalece la fibra capilar  
+          <br>
+           • Protección contra calor  
+          <br>
+           • Aporta brillo y suavidad  
+          <br><br>
+           📦 Presentación: 100 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+            💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+      
+      <!-- PRODUCTO 4 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/GfzZ3bfz/Whats-App-Image-2026-03-23-at-06-49-33-1.jpg"
+             alt="Redken Acidic Bonding Concentrate Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+         <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           Acidic Bonding Concentrate Shampoo · Shampoo reparador intensivo
+          </div>
+
+          <span class="producto-precio">$750 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo reparador que fortalece y reduce el quiebre del cabello.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional formulado para reparar el cabello dañado,
+           decolorado o tratado químicamente. Limpia suavemente mientras
+           fortalece la fibra capilar y mejora la resistencia del cabello.
+          <br><br>
+           🤍 Beneficios principales:
+          <br>
+           • Repara cabello dañado  
+          <br>
+           • Fortalece la fibra capilar  
+          <br>
+           • Hidrata profundamente  
+          <br>
+           • Reduce el quiebre  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+            💬 Preguntar por este producto
+          </a>
+
+        </div>
+      </div>
+
+      <!-- PRODUCTO 5 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/0v5d6Cp/Whats-App-Image-2026-03-23-at-06-49-33-2.jpg"
+             alt="Redken Acidic Color Gloss Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           Acidic Color Gloss Shampoo · Shampoo protector del color
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo que protege el color y aporta brillo intenso.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional diseñado para cabello teñido o tratado
+           químicamente. Limpia suavemente sin arrastrar el color,
+           aportando brillo intenso y suavidad mientras prolonga
+           la duración del color.
+          <br><br>
+           💗 Beneficios principales:
+          <br>
+           • Protege el color  
+          <br>
+            • Aporta brillo intenso  
+          <br>
+           • Limpia suavemente  
+          <br>
+           • Prolonga el color  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+            💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+      
+      <!-- PRODUCTO 6 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/QF7hgKjp/Whats-App-Image-2026-03-23-at-06-49-33-3.jpg"
+             alt="Redken Frizz Dismiss Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           Frizz Dismiss Conditioner · Acondicionador anti-frizz
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Acondicionador que controla el frizz y suaviza el cabello.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Acondicionador profesional formulado para controlar el frizz
+           y domar el cabello rebelde o encrespado. Hidrata profundamente,
+           mejora la manejabilidad y deja el cabello más suave y brillante.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Controla el frizz  
+          <br>
+           • Suaviza el cabello  
+          <br>
+           • Hidrata profundamente  
+          <br>
+           • Mejora la manejabilidad  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+            💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 7 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/BHfngPwx/Whats-App-Image-2026-03-23-at-06-49-33.jpg"
+             alt="Davines The Renaissance Circle"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           The Renaissance Circle · Mascarilla reparadora extrema
+          </div>
+
+          <span class="producto-precio">$450 MXN</span>
+
+          <small class="producto-desc corta">
+           Mascarilla de reparación profunda para cabello dañado.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+         <small class="producto-desc completa">
+            Mascarilla profesional diseñada para restaurar profundamente
+           el cabello dañado por decoloraciones, calor o procesos químicos.
+           Devuelve suavidad, brillo y fuerza desde la primera aplicación.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Reparación profunda  
+          <br>
+           • Restaura cabello dañado  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Devuelve el brillo  
+          <br><br>
+           📦 Presentación: 50 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+       
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 8 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/bMNvrYzQ/Whats-App-Image-2026-03-23-at-06-49-34-1.jpg"
+             alt="Redken Extreme Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+         <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+            Extreme Shampoo · Shampoo fortalecedor reparador
+          </div>
+
+         <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo fortalecedor para cabello dañado o quebradizo.
+          </small>
+
+         <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional formulado para fortalecer el cabello dañado
+           y reducir el quiebre. Limpia suavemente mientras mejora la
+           resistencia y la salud de la fibra capilar.
+          <br><br>
+           💙 Beneficios principales:
+          <br>
+           • Fortalece el cabello  
+          <br>
+           • Reduce el quiebre  
+          <br>
+           • Repara cabello dañado  
+          <br>
+           • Aporta resistencia  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 9 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/Xxn65WSR/Whats-App-Image-2026-03-23-at-06-49-34-2.jpg"
+             alt="Redken Extreme Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+            Extreme Conditioner · Acondicionador fortalecedor reparador
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Acondicionador fortalecedor para cabello dañado o quebradizo.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Acondicionador profesional diseñado para reparar el cabello
+           dañado y fortalecer la fibra capilar. Reduce el quiebre,
+           mejora la suavidad y aporta resistencia al cabello.
+          <br><br>
+           💙 Beneficios principales:
+          <br>
+           • Repara cabello dañado  
+          <br>
+           • Fortalece la fibra capilar  
+          <br>
+           • Reduce el quiebre  
+          <br>
+           • Aporta suavidad  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 10 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/G4vrbNLr/Whats-App-Image-2026-03-23-at-06-49-34-3.jpg"
+             alt="Redken Color Extend Blondage Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           Color Extend Blondage Shampoo · Shampoo matizador violeta
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo matizador para cabello rubio o decolorado.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional con pigmentos violetas diseñado para
+           neutralizar tonos amarillos en cabello rubio, gris o decolorado.
+           Ilumina el color, fortalece el cabello y mejora la apariencia
+           del tono rubio.
+          <br><br>
+           💜 Beneficios principales:
+          <br>
+           • Neutraliza tonos amarillos  
+          <br>
+           • Matiza cabello rubio  
+          <br>
+           • Ilumina el color  
+          <br>
+           • Fortalece el cabello  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 11 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/v4NbyYY6/Whats-App-Image-2026-03-23-at-06-49-34.jpg"
+             alt="Redken Frizz Dismiss Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           Frizz Dismiss Shampoo · Shampoo anti-frizz
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo anti-frizz que hidrata y suaviza el cabello.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+         <small class="producto-desc completa">
+            Shampoo profesional formulado para controlar el frizz y
+           suavizar el cabello rebelde o encrespado. Limpia suavemente
+           mientras hidrata y mejora la manejabilidad.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Controla el frizz  
+          <br>
+           • Suaviza el cabello  
+          <br>
+           • Hidrata profundamente  
+          <br>
+            • Mejora la manejabilidad  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 12 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/QFVmZHx9/Whats-App-Image-2026-03-23-at-06-49-35-1.jpg"
+             alt="Redken All Soft Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+         <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           All Soft Conditioner · Acondicionador hidratante con argán
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+            Acondicionador hidratante para cabello seco o maltratado.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Acondicionador profesional enriquecido con aceite de argán
+           que hidrata profundamente el cabello seco o maltratado.
+           Aporta suavidad, brillo y mejora la manejabilidad.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Hidrata profundamente  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Mejora el brillo  
+          <br>
+           • Reduce resequedad  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 13 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/KpGSb4DK/Whats-App-Image-2026-03-23-at-06-49-35-2.jpg"
+             alt="Davines Heart Of Glass Silkening Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+         <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           Heart Of Glass Silkening Shampoo · Shampoo para cabello rubio
+          </div>
+
+          <span class="producto-precio">$750 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo iluminador para cabello rubio o decolorado.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional diseñado para iluminar y proteger
+           el cabello rubio o decolorado. Limpia suavemente mientras
+           fortalece la fibra capilar y aporta suavidad.
+          <br><br>
+           💛 Beneficios principales:
+          <br>
+           • Ilumina cabello rubio  
+          <br>
+           • Protege el color  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Fortalece el cabello  
+          <br><br>
+           📦 Presentación: 250 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 14 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/jkZhPhZ2/Whats-App-Image-2026-03-23-at-06-49-35-3.jpg"
+             alt="Davines Heart Of Glass Sheer Glaze"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           Heart Of Glass Sheer Glaze · Termoprotector iluminador
+          </div>
+
+          <span class="producto-precio">$850 MXN</span>
+
+          <small class="producto-desc corta">
+           Termoprotector para cabello rubio que ilumina y protege.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+           Tratamiento sin enjuague diseñado para proteger el cabello
+           rubio del calor de herramientas térmicas. Aporta brillo,
+           suavidad y reduce el frizz sin aportar peso.
+          <br><br>
+           💛 Beneficios principales:
+          <br>
+           • Protege del calor  
+          <br>
+           • Ilumina cabello rubio  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Reduce frizz  
+          <br><br>
+           📦 Presentación: 150 ml · Uso profesional y en casa
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+    
+
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 15 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/G4wzH8K1/Whats-App-Image-2026-03-23-at-06-49-35.jpg"
+             alt="Redken All Soft Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">REDKEN</strong>
+
+          <div class="producto-nombre">
+           All Soft Shampoo · Shampoo hidratante con argán
+          </div>
+
+          <span class="producto-precio">$685 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo hidratante para cabello seco o maltratado.
+         </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional enriquecido con aceite de argán
+           diseñado para hidratar profundamente el cabello seco
+           o maltratado. Limpia suavemente mientras aporta brillo,
+           suavidad y mejora la manejabilidad.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Hidrata profundamente  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Mejora el brillo  
+          <br>
+           • Reduce resequedad  
+          <br><br>
+           📦 Presentación: 300 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 16 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/BHVTSwG1/Whats-App-Image-2026-03-23-at-06-49-36-1.jpg"
+             alt="Davines Naturaltech Energizing Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           Naturaltech Energizing Shampoo · Shampoo fortalecedor anticaída
+          </div>
+
+          <span class="producto-precio">$750 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo fortalecedor que ayuda a reducir la caída del cabello.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional diseñado para fortalecer el cabello débil
+           y estimular el crecimiento. Revitaliza el cuero cabelludo y
+           ayuda a reducir la caída capilar.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Fortalece el cabello  
+          <br>
+           • Estimula el crecimiento  
+          <br>
+           • Revitaliza cuero cabelludo  
+          <br>
+           • Reduce la caída  
+          <br><br>
+           📦 Presentación: 250 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a> 
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 17 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/BH6Y1g0G/Whats-App-Image-2026-03-23-at-06-49-36.jpg"
+             alt="Davines Naturaltech Rebalancing Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           Naturaltech Rebalancing Shampoo · Shampoo para cabello graso
+          </div>
+
+          <span class="producto-precio">$750 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo equilibrante para cuero cabelludo graso.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional diseñado para equilibrar el cuero cabelludo
+           graso. Limpia profundamente, regula la producción de grasa y
+           aporta frescura sin resecar el cabello.
+          <br><br>
+           🌿 Beneficios principales:
+          <br>
+           • Controla la grasa  
+          <br>
+           • Equilibra el cuero cabelludo  
+          <br>
+           • Limpieza profunda  
+          <br>
+           • Aporta frescura  
+          <br><br>
+           📦 Presentación: 250 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a> 
+
+        </div>
+
+      </div>
+      
+     <!-- PRODUCTO 18 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/cXsbb0v6/Whats-App-Image-2026-04-01-at-01-52-22.jpg"
+             alt="Davines OI Oil"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           OI Oil · Aceite capilar nutritivo con Roucou
+          </div>
+
+         <span class="producto-precio">$950 MXN</span>
+
+          <small class="producto-desc corta">
+           Aceite capilar que aporta brillo, suavidad y control del frizz.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Aceite profesional multifuncional diseñado para aportar
+           brillo extremo, suavidad y protección al cabello.
+           Nutre profundamente sin dejar sensación pesada.
+          <br><br>
+           ✨ Beneficios principales:
+          <br>
+           • Aporta brillo intenso  
+          <br>
+           • Controla el frizz  
+          <br>
+           • Suaviza el cabello  
+          <br>
+           • Protege del calor  
+          <br>
+           • Ideal para todo tipo de cabello  
+          <br><br>
+           🌿 Ingrediente clave: Aceite de Roucou  
+          <br>
+           📦 Presentación: 135 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 19 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/nMYsCn2n/Whats-App-Image-2026-04-01-at-01-52-23.jpg"
+             alt="Davines OI All In One Milk"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           OI All In One Milk · Tratamiento multifuncional sin enjuague
+          </div>
+
+          <span class="producto-precio">$850 MXN</span>
+
+          <small class="producto-desc corta">
+            Tratamiento leave-in que hidrata, protege y controla el frizz.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Tratamiento multifuncional sin enjuague que aporta suavidad,
+           brillo y protección térmica. Ideal para facilitar el peinado
+           y mejorar la manejabilidad del cabello.
+          <br><br>
+           ✨ Beneficios principales:
+          <br>
+           • Protección contra calor  
+          <br>
+           • Controla el frizz  
+          <br>
+           • Aporta brillo y suavidad  
+          <br>
+           • Facilita el peinado  
+          <br>
+           • Hidrata sin dejar pesado  
+          <br><br>
+           🌿 Ingrediente clave: Aceite de Roucou  
+          <br>
+           📦 Presentación: 135 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 20 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/Fq45365n/Whats-App-Image-2026-04-01-at-01-52-23-1.jpg"
+             alt="Davines OI Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           OI Conditioner · Acondicionador nutritivo con Roucou
+          </div>
+
+          <span class="producto-precio">$820 MXN</span>
+
+          <small class="producto-desc corta">
+           Acondicionador nutritivo que aporta brillo y suavidad.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Acondicionador profesional formulado con aceite de Roucou
+           que nutre profundamente el cabello, aporta brillo intenso
+           y mejora la suavidad sin aportar peso.
+          <br><br>
+           ✨ Beneficios principales:
+          <br>
+           • Aporta brillo intenso  
+          <br>
+           • Suaviza el cabello  
+          <br>
+           • Nutre profundamente  
+          <br>
+           • Controla el frizz  
+          <br>
+           • Ideal para todo tipo de cabello  
+          <br><br>
+           🌿 Ingrediente clave: Aceite de Roucou  
+          <br>
+           📦 Presentación: 250 ml · Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+     <!-- PRODUCTO 21 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/6JbBGnXX/Whats-App-Image-2026-04-01-at-01-52-23-2.jpg"
+             alt="Davines Heart Of Glass Intense Treatment"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           Heart Of Glass Intense Treatment
+          </div>
+
+          <span class="producto-precio">$780 MXN</span>
+
+          <small class="producto-desc corta">
+           Mascarilla intensiva para cabello rubio o decolorado.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Tratamiento intensivo diseñado para fortalecer y nutrir 
+           profundamente el cabello rubio, decolorado o con mechas. 
+           Mejora la elasticidad, brillo y suavidad sin aportar peso.
+          <br><br>
+           ✨ Beneficios principales:
+          <br>
+           • Fortalece cabello rubio o decolorado  
+          <br>
+           • Nutre profundamente  
+          <br>
+           • Aporta brillo intenso  
+          <br>
+           • Mejora la elasticidad  
+          <br>
+           • Reduce el daño químico  
+          <br><br>
+           🌿 Fórmula profesional Davines  
+          <br>
+           📦 Presentación: 200 ml  
+          <br>
+           💎 Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 22 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/yH8Y7yt/Whats-App-Image-2026-04-01-at-01-52-23-3.jpg"
+             alt="Davines Beautiful Things Restoring Leave-In"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+          <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           Beautiful Things Restoring Leave-In
+          </div>
+
+          <span class="producto-precio">$620 MXN</span>
+
+          <small class="producto-desc corta">
+           Tratamiento sin enjuague que repara y protege el cabello.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Tratamiento leave-in profesional que ayuda a restaurar 
+           el cabello dañado, mejorar la suavidad y proteger 
+           contra el daño diario sin dejar sensación pesada.
+          <br><br>
+           ✨ Beneficios principales:
+          <br>
+           • Repara cabello dañado  
+          <br>
+           • Protección sin enjuague  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Reduce frizz  
+          <br>
+           • Mejora manejabilidad  
+          <br><br>
+           🌿 Fórmula profesional Davines  
+          <br>
+           📦 Presentación: 90 ml  
+          <br>
+          💎 Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+      
+     <!-- PRODUCTO 23 -->
+      <div class="producto-item">
+
+        <img src="https://i.ibb.co/8gL0Q8m9/Whats-App-Image-2026-04-01-at-01-52-24.jpg"
+             alt="Davines NOUNOU Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+
+         <strong class="producto-marca">DAVINES</strong>
+
+          <div class="producto-nombre">
+           NOUNOU Shampoo · Reparación intensiva
+          </div>
+
+          <span class="producto-precio">$680 MXN</span>
+
+          <small class="producto-desc corta">
+           Shampoo nutritivo para cabello dañado o procesado.
+          </small>
+
+          <button class="ver-mas">Ver descripción completa</button>
+
+          <small class="producto-desc completa">
+            Shampoo profesional diseñado para nutrir profundamente 
+           el cabello seco, dañado o químicamente tratado. 
+           Ayuda a restaurar la suavidad, brillo y fuerza del cabello.
+          <br><br>
+           ✨ Beneficios principales:
+          <br>
+           • Repara cabello dañado  
+          <br>
+           • Nutre profundamente  
+          <br>
+           • Aporta suavidad  
+          <br>
+           • Mejora el brillo  
+          <br>
+           • Ideal para cabello procesado  
+          <br><br>
+           🌿 Ingrediente clave: Extracto de tomate  
+          <br>
+           📦 Presentación: 250 ml  
+          <br>
+           💎 Uso profesional y en casa
+          </small>
+
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCTO 24 -->
+      <div class="producto-item">
+        <img src="https://i.ibb.co/PGYYNdXY/24.png"
+             alt="Redken Acidic Bonding Concentrate Serum"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+          <strong class="producto-marca">REDKEN</strong>
+          <div class="producto-nombre">
+           Acidic Bonding Concentrate · Sérum reparador 24/7
+          </div>
+          <span class="producto-precio">$999 MXN</span>
+          <small class="producto-desc corta">
+           Sérum reparador de uso diario.
+           Fortalece, hidrata y protege del calor.
+          </small>
+          <button class="ver-mas">Ver descripción completa</button>
+          <small class="producto-desc completa">
+           Sérum reparador profesional diseñado para reparar y fortalecer
+           los enlaces internos del cabello.
+           Protege del calor hasta 230 °C y mejora la resistencia capilar.
+           <br><br>
+           🤍 Ingrediente clave: ácido cítrico y Bonding Care Complex al 7%.
+           <br>
+           📦 Presentación: 100 ml · Uso profesional y en casa.
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+        </div>
+      </div>
+
+     <!-- PRODUCTO 25 -->
+     <div class="producto-item">
+        <img src="https://i.ibb.co/zWGmM3kT/25.png"
+             alt="Redken Acidic Bonding Concentrate Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+          <strong class="producto-marca">REDKEN</strong>
+          <div class="producto-nombre">
+           Acidic Bonding Concentrate Conditioner · Acondicionador reparador intensivo
+          </div>
+          <span class="producto-precio">$750 MXN</span>
+          <small class="producto-desc corta">
+            Acondicionador reparador intensivo.
+           Fortalece enlaces y reduce el quiebre.
+          </small>
+          <button class="ver-mas">Ver descripción completa</button>
+          <small class="producto-desc completa">
+           Acondicionador profesional de alto rendimiento que fortalece
+           y repara la fibra capilar desde el interior.
+           <br><br>
+           🤍 Ingrediente clave: ácido cítrico y Bonding Care Complex al 11%.
+           <br>
+           📦 Presentación: 300 ml · Uso profesional y en casa.
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+        </div>
+      </div>
+
+     <!-- PRODUCTO 26 -->
+     <div class="producto-item">
+        <img src="https://i.ibb.co/7t9hwZ30/27.png"
+             alt="Davines The Renaissance Circle"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+          <strong class="producto-marca">DAVINES</strong>
+          <div class="producto-nombre">
+           The Renaissance Circle · Mascarilla reparadora extrema
+          </div>
+          <span class="producto-precio">$450 MXN</span>
+          <small class="producto-desc corta">
+            Mascarilla de reparación extrema.
+            Restaura fuerza, suavidad y brillo.
+          </small>
+          <button class="ver-mas">Ver descripción completa</button>
+          <small class="producto-desc completa">
+            Mascarilla profesional de reparación extrema diseñada para nutrir
+           y restaurar profundamente el cabello extremadamente dañado por
+           decoloraciones, tintes, herramientas de calor o procesos químicos.
+           Ayuda a reestructurar la fibra capilar, devolviendo suavidad,
+           fuerza y brillo visible desde la primera aplicación.
+           <br><br>
+           🌿 Ingredientes clave: arcilla amarilla y manteca de baobab.
+           <br>
+           📦 Presentación: 50 ml · Uso profesional y en casa.
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+        </div>
+      </div>
+
+     <!-- PRODUCTO 28 -->
+      <div class="producto-item">
+        <img src="https://i.ibb.co/sd4vCf9f/28.png"
+             alt="Redken Acidic Bonding Concentrate Shampoo"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+          <strong class="producto-marca">REDKEN</strong>
+          <div class="producto-nombre">
+           Acidic Bonding Concentrate Shampoo · Shampoo reparador intensivo
+          </div>
+          <span class="producto-precio">$750 MXN</span>
+          <small class="producto-desc corta">
+           Shampoo reparador intensivo.
+           Fortalece enlaces y protege el color.
+          </small>
+          <button class="ver-mas">Ver descripción completa</button>
+          <small class="producto-desc completa">
+           Shampoo reparador profesional de alto rendimiento formulado para
+           fortalecer y reparar los enlaces debilitados del cabello dañado,
+           decolorado, teñido o procesado químicamente.
+           Limpia suavemente mientras restaura fuerza y resistencia.
+           <br><br>
+           🤍 Ingrediente clave: ácido cítrico y Bonding Care Complex al 7%.
+           <br>
+           📦 Presentación: 300 ml · Uso profesional y en casa.
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+        </div>
+      </div>
+
+     <!-- PRODUCTO 29 -->
+      <div class="producto-item">
+        <img src="https://i.ibb.co/ccstRsVc/29.png"
+             alt="Redken Acidic Bonding Concentrate Leave-In Treatment"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+        <div class="producto-info">
+          <strong class="producto-marca">REDKEN</strong>
+          <div class="producto-nombre">
+           Acidic Bonding Concentrate Leave-In · Tratamiento sin enjuague reparador
+          </div>
+          <span class="producto-precio">$850 MXN</span>
+          <small class="producto-desc corta">
+           Tratamiento sin enjuague reparador.
+           Hidrata, fortalece y protege del calor.
+          </small>
+          <button class="ver-mas">Ver descripción completa</button>
+          <small class="producto-desc completa">
+           Tratamiento leave-in profesional diseñado para reparar, fortalecer
+           y proteger el cabello dañado o decolorado.
+           Protege del calor hasta 230 °C y mejora la resistencia capilar.
+           <br><br>
+           🤍 Ingrediente clave: ácido cítrico y Bonding Care Complex al 5%.
+           <br>
+           📦 Presentación: 150 ml · Uso profesional y en casa.
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+            💬 Preguntar por este producto
+          </a>
+       </div>
+      </div>
+
+     <!-- PRODUCTO 30 -->
+      <div class="producto-item">
+       <img src="https://i.ibb.co/SwBDwxxg/30.png"
+             alt="Redken Acidic Color Gloss Conditioner"
+             loading="lazy"
+             onclick="zoomImagen(this.src)">
+       <div class="producto-info">
+          <strong class="producto-marca">REDKEN</strong>
+          <div class="producto-nombre">
+           Acidic Color Gloss Conditioner · Acondicionador protector del color
+          </div>
+          <span class="producto-precio">$685 MXN</span>
+          <small class="producto-desc corta">
+           Acondicionador protector del color.
+           Sella la cutícula y aporta brillo intenso.
+          </small>
+          <button class="ver-mas">Ver descripción completa</button>
+          <small class="producto-desc completa">
+           Acondicionador profesional formulado para sellar la cutícula
+           y aportar brillo intenso al cabello teñido o tratado químicamente.
+           Prolonga la intensidad del color y mejora la apariencia del cabello.
+           <br><br>
+           💗 Ingrediente clave: Acidic Shine Complex y pH ácido (3.5–4.5).
+           <br>
+           📦 Presentación: 300 ml · Uso profesional y en casa.
+          </small>
+          <a class="btn btn-whatsapp-producto" target="_blank">
+           💬 Preguntar por este producto
+          </a>
+       </div>
+      </div>
+
+
+    </div><!-- /.productos-lista -->
+
+   <p class="nota-productos femenina">
+     Si buscas un producto específico o una recomendación personalizada,
+     <br>con gusto te asesoramos 💖
+    </p>
+
+    <p class="nota-productos femenina">
+     Todos nuestros productos son <strong>originales y de uso profesional</strong>,
+     seleccionados para cuidar la salud de tu cabello.
+    </p>
+
+    <a class="btn"
+     href="https://wa.me/523112553233?text=Hola,%20me%20gustaría%20recibir%20asesoría%20sobre%20productos%20para%20mi%20cabello."
+     target="_blank">
+     💬 Asesoría personalizada por WhatsApp
+    </a>
+
+    <a class="btn" onclick="regresar()">⬅️ Regresar</a>
+
+  </div><!-- /.productos-inner -->
+</div><!-- /.seccion productos -->
+
+
+<div class="seccion" id="galeria">
+  <h2 class="titulo">Antes y Después</h2>
+
+  <p class="subtitulo-servicios">
+    Resultados reales realizados en nuestra estética.
+    Cada imagen muestra transformaciones auténticas con técnicas profesionales.
+  </p>
+
+  <div style="display:flex; flex-direction:column; gap:26px; align-items:center;">
+
+    <!-- ITEM -->
+<div class="galeria-item">
+  <img src="https://i.ibb.co/KjZsQ2nn/1.png"
+       alt="Botox reestructurante antes y después"
+       style="width:100%; border-radius:20px; cursor: zoom-in;"
+       onclick="zoomImagen(this.src)">
+  <p style="margin-top:10px; font-weight:600; color:#444;">
+    Botox reestructurante · Antes y Después
+  </p>
+</div>
+
+<div class="galeria-item">
+  <img src="https://i.ibb.co/21jDxmn6/2.png"
+       alt="Alisado reestructurante antes y después"
+       style="width:100%; border-radius:20px; cursor: zoom-in;"
+       onclick="zoomImagen(this.src)">
+  <p style="margin-top:10px; font-weight:600; color:#444;">
+    Alisado reestructurante · Antes y Después
+  </p>
+</div>
+
+<div class="galeria-item">
+  <img src="https://i.ibb.co/JwK9dV6F/3.png"
+       alt="Tratamientos antes y después"
+       style="width:100%; border-radius:20px; cursor: zoom-in;"
+       onclick="zoomImagen(this.src)">
+  <p style="margin-top:10px; font-weight:600; color:#444;">
+    Tratamientos · Antes y Después
+  </p>
+</div>
+
+<div class="galeria-item">
+  <img src="https://i.ibb.co/h6nJkgH/4.png"
+       alt="Tratamientos antes y después"
+       style="width:100%; border-radius:20px; cursor: zoom-in;"
+       onclick="zoomImagen(this.src)">
+  <p style="margin-top:10px; font-weight:600; color:#444;">
+    Tratamientos· Antes y Después
+  </p>
+</div>
+
+<div class="galeria-item">
+  <img src="https://i.ibb.co/rRY4xPvB/5.png"
+       alt="Blonder con contour en el marco del rostro antes y después"
+       style="width:100%; border-radius:20px; cursor: zoom-in;"
+       onclick="zoomImagen(this.src)">
+  <p style="margin-top:10px; font-weight:600; color:#444;">
+    Blonder con contour en el marco del rostro. · Antes y Después
+  </p>
+</div>
+
+  </div>
+
+ <a class="btn" onclick="regresar()">⬅️ Regresar</a>
+
+</div>
+
+<script>
+/* =========================
+   NAVEGACIÓN ENTRE SECCIONES
+========================= */
+
+function mostrar(id) {
+  const inicio = document.getElementById("inicio");
+  const secciones = document.querySelectorAll(".seccion");
+  const destino = document.getElementById(id);
+
+  if (inicio) inicio.style.display = "none";
+  secciones.forEach(sec => sec.style.display = "none");
+
+  if (destino) {
+    destino.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
+function regresar() {
+  const inicio = document.getElementById("inicio");
+  const secciones = document.querySelectorAll(".seccion");
+  const overlay = document.querySelector(".overlay");
+
+  secciones.forEach(sec => sec.style.display = "none");
+
+  if (inicio) inicio.style.display = "block";
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+/* =========================
+   MAPAS
+========================= */
+
+function abrirMapa() {
+  const esApple = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  const appleMaps = "https://maps.apple.com/?address=Calle%20Quebec%2088,%20Ciudad%20del%20Valle,%2063157%20Tepic,%20Nay.,%20México";
+  const googleMaps = "https://maps.app.goo.gl/dza9uPuFsoeZUvx79";
+
+  window.open(esApple ? appleMaps : googleMaps, "_blank");
+}
+
+/* =========================
+   ZOOM DE IMÁGENES
+========================= */
+
+function zoomImagen(src) {
+  const overlay = document.getElementById("zoomOverlay");
+  const img = document.getElementById("zoomImg");
+
+  if (overlay && img) {
+    img.src = src;
+    overlay.style.display = "flex";
+  }
+}
+
+function cerrarZoom() {
+  const overlay = document.getElementById("zoomOverlay");
+  if (overlay) overlay.style.display = "none";
+}
+
+/* =========================
+   PRODUCTOS (BUSCADOR + VER MÁS)
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  /* 🔤 ORDEN ALFABÉTICO DE PRODUCTOS */
+
+ /* 🔍 BUSCADOR INTELIGENTE */
+const buscador = document.getElementById("buscador");
+
+function normalizar(texto) {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+const sinonimos = {
+  pelo: "cabello",
+  cabello: "cabello",
+
+  reseco: "seco",
+  reseca: "seco",
+  seco: "seco",
+
+  frizz: "encrespado",
+  esponjado: "encrespado",
+  encrespado: "encrespado",
+
+  rizo: "rizado",
+  rizos: "rizado",
+  chino: "rizado",
+  chinos: "rizado",
+  ondulado: "rizado",
+
+  rubio: "rubio",
+  rubios: "rubio",
+  decolorado: "rubio",
+  decoloracion: "rubio",
+
+  tinte: "teñido",
+  tintes: "teñido",
+  teñido: "teñido",
+  color: "teñido",
+
+  caida: "caida",
+  secae: "caida",
+  anticaida: "caida",
+
+  dañado: "dañado",
+  maltratado: "dañado",
+  quemado: "dañado",
+
+  hidratante: "hidratado",
+  hidratado: "hidratado",
+  suave: "hidratado",
+
+  brillo: "brillo",
+  opaco: "brillo"
+};
+
+if (buscador) {
+  buscador.addEventListener("input", function () {
+    let texto = normalizar(this.value);
+
+    Object.keys(sinonimos).forEach(palabra => {
+      texto = texto.replaceAll(palabra, sinonimos[palabra]);
+    });
+
+    document.querySelectorAll(".producto-item").forEach(producto => {
+      const contenido = normalizar(producto.innerText);
+      producto.style.display = contenido.includes(texto)
+        ? ""
+        : "none";
+    });
+  });
+}
+
+
+  /* 📦 PRODUCTOS */
+  const productos = document.querySelectorAll(".producto-item");
+  if (!productos.length) return;
+
+  productos.forEach(producto => {
+
+    const btnVerMas = producto.querySelector(".ver-mas");
+    const descCorta = producto.querySelector(".producto-desc.corta");
+    const descCompleta = producto.querySelector(".producto-desc.completa");
+    const btnWhatsapp = producto.querySelector(".btn-whatsapp-producto");
+    const nombreProducto = producto.querySelector(".producto-nombre")?.innerText || "";
+
+    /* VER MÁS / VER MENOS */
+    if (btnVerMas && descCorta && descCompleta) {
+      btnVerMas.addEventListener("click", () => {
+        const abierto = descCompleta.style.display === "block";
+
+        descCompleta.style.display = abierto ? "none" : "block";
+        descCorta.style.display = abierto ? "block" : "none";
+        btnVerMas.innerText = abierto ? "Ver descripción completa" : "Ver menos";
+      });
+    }
+
+    /* WHATSAPP POR PRODUCTO */
+    if (btnWhatsapp && nombreProducto) {
+      const mensaje = `Hola, me interesa el producto: ${nombreProducto}`;
+      btnWhatsapp.href = `https://wa.me/523111795658?text=${encodeURIComponent(mensaje)}`;
+    }
+
+  });
+
+});
+
+function preguntar(servicio){
+  const mensaje = `Hola, quiero información sobre el tratamiento: ${servicio}%0A%0ATipo de cabello:%0ALargo:%0AObjetivo:%0A%0AGracias.`;
+  window.open(`https://wa.me/523111795658?text=${mensaje}`, "_blank");
+}
+</script>
+
+</body>
+</html>
